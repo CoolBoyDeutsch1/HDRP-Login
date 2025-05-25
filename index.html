@@ -70,9 +70,15 @@
       const password = document.getElementById('password').value;
 
       const messageEl = document.getElementById('message');
-      if(username === 'Nigga' && password === 'IchBinEinFetterNigga') {
+      if(username === 'HDRPTeamMitglied' && password === 'HDRPTeam') {
         messageEl.textContent = 'Willkommen, ' + username + '!';
         messageEl.className = 'success';
+
+        // Weiterleitung nach 1 Sekunde (damit man die Erfolgsmeldung kurz sieht)
+        setTimeout(() => {
+          window.location.href = "https://melon.ly/join/QMKTGK";
+        }, 1000);
+
       } else {
         messageEl.textContent = 'Falscher Benutzername oder Passwort!';
         messageEl.className = 'error';
